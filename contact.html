@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Alexis Guevara Website | About</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Alexis Guevara Website. Graphic Designer based out of New York City">
+    <meta name="keywords" content="Graphic Design, Web Design, Branding, Logo Design, Product Design, Packaging Design, Magazine Design, Poster Design">
+    <meta name="author" content="Virtus Business Group">
+    <link href="assets/css/header.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/contact.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+
+<header>
+
+    <div class="big-sec">
+        contact
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">home</a></li>
+            <li><a href="portfolio.html">portfolio</a></li>
+            <li><a href="about.html">about me</a></li>
+<!--            <li><a href="contact.html">contact</a></li>-->
+        </ul>
+    </nav>
+
+</header>
+
+
+<div class="contact-container">
+    <!-- Single Image -->
+    <img src="assets/images/contacts.png" alt="Contact Icons" class="contact-icons">
+
+    <!-- Clickable Text Links -->
+    <div class="contact-links">
+        <a href="tel:+12013979283" class="contact-link">+1 (201) 397-9283</a>
+        <a href="mailto:alexis.gue@hotmail.com" class="contact-link">alexis.gue@hotmail.com</a>
+        <a href="https://www.instagram.com/alexisguevaradesign" target="_blank" rel="noopener noreferrer" class="contact-link">@alexisguevaradesign</a>
+    </div>
+</div>
+
+
+<!-- Contact Form Section -->
+<div class="contact-form-container">
+  <h2>Contact Me</h2>
+  <form id="contactForm" action="https://docs.google.com/forms/d/e/1FAIpQLSddlJMj7Kbk2Ll1I5AW20657wo9HIa1ZGnK7K0m6bLA5q5edQ/formResponse" method="POST" target="hidden_iframe" onsubmit="return clearForm()">
+    <input type="text" id="first_name" name="entry.403582210" placeholder="First Name*" required>
+    <input type="text" id="last_name" name="entry.936658566" placeholder="Last Name*" required>
+    <input type="email" id="email" name="entry.1382435693" placeholder="Email*" required>
+    <input type="tel" id="phone" name="entry.1253323326" placeholder="Phone Number*" required>
+    <textarea id="message" name="entry.2088144819" placeholder="Your Message*" rows="5" required></textarea>
+    <!-- Invisible iframe for handling form submission without redirecting the user -->
+    <iframe name="hidden_iframe" style="display:none;"></iframe>
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+<script>
+  function clearForm() {
+    // Delay clearing the form slightly to ensure the submission is processed
+    setTimeout(function () {
+      document.getElementById("contactForm").reset();
+    }, 100);
+  }
+</script>
+
+
+
+</body>
+</html>

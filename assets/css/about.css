@@ -1,0 +1,35 @@
+/* About Section */
+.about-sec {
+    display: flex; /* Enable Flexbox */
+    justify-content: space-between; /* Space out the text and image */
+    align-items: center; /* Align items vertically */
+    padding: 5vw 10%; /* Add padding for spacing */
+    color: #ffffff;
+}
+
+/* Left Article */
+.left_article {
+    flex: 1; /* Allow the text to take up space proportionally */
+    padding-right: 2vw; /* Add spacing between the text and image */
+}
+
+.left_article p {
+    line-height: 1.75vw;
+    font-family: "Helvetica Neue", Helvetica, Arial, "sans-serif";
+    font-size: 1.2vw;
+    font-weight: 300;
+}
+
+/* Right Article */
+.right_article {
+    flex: 1; /* Allow the image to take up space proportionally */
+    text-align: right; /* Align the image to the right */
+}
+
+.aboutimage {
+    width: 100%; /* Ensure the image takes up the full container width */
+    max-width: 400px; /* Limit the maximum width of the image */
+    height: auto; /* Maintain the aspect ratio */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    border: white 3px solid; /* Optional: Add a border */
+}

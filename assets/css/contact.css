@@ -1,0 +1,87 @@
+.contact-container {
+    display: flex; /* Align items in a column */
+    flex-direction: column;
+    align-items: center; /* Center the image and text */
+    margin-top: 14vw;
+    gap: 2vw; /* Add spacing between the image and text links */
+}
+
+.contact-icons {
+    width: 80%; /* Adjust the size of the single image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.contact-links {
+    display: flex; /* Align text links in a row */
+    justify-content: space-between; /* Distribute text links evenly */
+    gap: 12vw; /* Add spacing between each link */
+}
+
+.contact-link {
+    font-size: 2vw; /* Adjust text size */
+    color: #FFFFFF; /* Set text color */
+    text-decoration: none; /* Remove underline */
+    font-family: "Helvetica Neue", Helvetica, Arial, "sans-serif";
+    text-align: center; /* Center text */
+    transition: color 0.3s ease; /* Add a hover effect */
+    font-weight: lighter;
+}
+
+.contact-link:hover {
+    color: #3a3a3a; /* Change text color on hover */
+    cursor: pointer; /* Show pointer cursor on hover */
+}
+
+/* Contact Form Container */
+.contact-form-container {
+  background-color: #1a1a1a; /* Dark background to match site theme */
+  color: #ffffff; /* White text for contrast */
+  max-width: 60%; /* Limit form width */
+  margin: 3vw auto; /* Center form on the page */
+  padding: 2vw;
+  border-radius: 10px; /* Smooth rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+  text-align: center;
+}
+
+/* Form Elements */
+.contact-form-container h2 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 2vw;
+  margin-bottom: 1vw;
+}
+
+.contact-form-container form {
+  display: flex;
+  flex-direction: column; /* Stack inputs vertically */
+  align-items: center;
+}
+
+.contact-form-container input,
+.contact-form-container textarea {
+  width: 90%; /* Full width of container with padding */
+  margin: 0.5vw 0; /* Spacing between inputs */
+  padding: 1vw;
+  font-size: 1.2vw;
+  border: 1px solid #cccccc; /* Subtle border */
+  border-radius: 5px;
+  background-color: #333333; /* Match dark theme */
+  color: #ffffff; /* Text color */
+}
+
+.contact-form-container button {
+  width: 50%;
+  padding: 1vw;
+  margin-top: 1vw;
+  font-size: 1.5vw;
+  color: #ffffff;
+  background-color: #007bff; /* Blue button */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-form-container button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}

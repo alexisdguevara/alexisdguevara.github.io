@@ -1,0 +1,30 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    width: 100%;
+    font-family: "Helvetica Neue", Helvetica, Arial, "sans-serif";
+}
+
+/* Image Home Section */
+.image-home {
+	display: flex; /* Use flexbox to align items side by side */
+	justify-content: center; /* Center the images horizontally */
+	align-items: center; /* Align images vertically (optional, for uniformity) */
+	width: 100%; /* Full width of the screen */
+    padding-top: 8vw; /* Add some padding at the top */
+
+}
+
+.image-home .home-image-left {
+	width: 60%; /* First image takes up 50% of the width */
+	height: auto; /* Maintain aspect ratio */
+	object-fit: cover;
+}
+
+.image-home .home-image-right {
+	width: 30%; /* Second image takes up 25% of the width */
+	height: auto; /* Maintain aspect ratio */
+	object-fit: cover;
+    border: 3px solid #ffffff;
+}
