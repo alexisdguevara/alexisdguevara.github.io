@@ -33,3 +33,59 @@
     border-radius: 10px; /* Optional: Add rounded corners */
     border: white 3px solid; /* Optional: Add a border */
 }
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+    .about-sec {
+        flex-direction: column; /* Stack items vertically */
+        padding: 5vw 5%; /* Reduce padding for smaller screens */
+        text-align: center; /* Center-align content */
+    }
+
+    .left_article {
+        padding-right: 0; /* Remove right padding */
+        margin-bottom: 4vw; /* Add spacing below the text */
+    }
+
+    .left_article p {
+        line-height: 1.5em; /* Adjust line height for readability */
+        font-size: 4vw; /* Increase font size for smaller screens */
+    }
+
+    .right_article {
+        text-align: center; /* Center-align the image */
+    }
+
+    .aboutimage {
+        max-width: 300px; /* Reduce max-width for smaller screens */
+        margin: 0 auto; /* Center the image */
+    }
+}
+
+/* Mobile Optimization */
+@media (max-width: 480px) {
+    .about-sec {
+        flex-direction: column; /* Stack items vertically */
+        padding: 5vw 5%; /* Reduce padding for smaller screens */
+        text-align: center; /* Center-align content */
+    }
+
+    .left_article {
+        padding-right: 0; /* Remove right padding */
+        margin-bottom: 4vw; /* Add spacing below the text */
+    }
+
+    .left_article p {
+        line-height: 1.5em; /* Adjust line height for readability */
+        font-size: 4vw; /* Increase font size for smaller screens */
+    }
+
+    .right_article {
+        text-align: center; /* Center-align the image */
+    }
+
+    .aboutimage {
+        max-width: 250px; /* Reduce max-width for smaller screens */
+        margin: 0 auto; /* Center the image */
+    }
+}
