@@ -88,48 +88,61 @@
 
 /* Tablet Optimization */
 @media (max-width: 768px) {
-  .contact-form-container {
+    .contact-link {
+        font-size: 4vw; /* Adjust text size */
+    }
+    .contact-form-container {
     max-width: 80%; /* Increase width for tablet */
     padding: 4vw;
-  }
+    }
 
-  .contact-form-container h2 {
+    .contact-form-container h2 {
     font-size: 4vw; /* Adjust font size for tablet */
     margin-bottom: 2vw;
-  }
+    }
 
-  .contact-form-container input,
-  .contact-form-container textarea {
+    .contact-form-container input,
+    .contact-form-container textarea {
     font-size: 2.5vw; /* Increase font size for readability */
     padding: 2vw;
-  }
+    }
 
-  .contact-form-container button {
+    .contact-form-container button {
     font-size: 3vw; /* Increase button size */
     padding: 2vw;
-  }
+    }
 }
 
 /* Mobile Optimization */
 @media (max-width: 480px) {
-  .contact-form-container {
+    .contact-links {
+        display: flex; /* Align text links in a row */
+        justify-content: space-between; /* Distribute text links evenly */
+        gap: 3vw; /* Add spacing between each link */
+    }
+
+    .contact-link {
+        font-size: 3.25vw; /* Adjust text size */
+    }
+
+    .contact-form-container {
     max-width: 90%; /* Full width on mobile */
     padding: 5vw;
-  }
+    }
 
-  .contact-form-container h2 {
+    .contact-form-container h2 {
     font-size: 5vw; /* Larger font size for mobile */
     margin-bottom: 3vw;
-  }
+    }
 
-  .contact-form-container input,
-  .contact-form-container textarea {
+    .contact-form-container input,
+    .contact-form-container textarea {
     font-size: 4vw; /* Adjust font size for mobile */
     padding: 3vw;
-  }
+    }
 
-  .contact-form-container button {
+    .contact-form-container button {
     font-size: 5vw; /* Larger button for mobile */
     padding: 4vw;
-  }
+    }
 }
