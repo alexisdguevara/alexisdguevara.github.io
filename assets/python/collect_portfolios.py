@@ -27,10 +27,6 @@ for folder in os.listdir(portfolio_dir):
         
 projects.sort(key=lambda x: x['creation_time'], reverse=True)
 
-# Delete creation_time key
-for project in projects:
-    del project['creation_time']
-
 with open('assets/portfolio.json', 'w') as f:
     json.dump(projects, f)
     
