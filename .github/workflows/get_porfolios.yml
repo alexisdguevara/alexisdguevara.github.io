@@ -40,7 +40,7 @@ jobs:
         git config --global user.name "github-actions"
         git config --global user.email "github-actions@github.com"
         
-        git add portfolio.json
+        git add assets/portfolio.json
         
         # Check if there are changes to commit
         if git diff --cached --exit-code; then
