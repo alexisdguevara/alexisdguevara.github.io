@@ -1,0 +1,30 @@
+.portfolio-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns */
+  gap: 2vw; /* Space between items */
+  padding: 2vw;
+}
+
+.project {
+  text-align: center; /* Center-align text and image */
+}
+
+.project img {
+  width: 100%; /* Make the image responsive */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 1vw; /* Optional: rounded corners */
+}
+
+.project p {
+  margin-top: 1vw;
+  font-size: 1.25vw;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.project a {
+  /*text-decoration: none;*/
+  color: white;
+  padding: 0.5vw 1vw;
+  border-radius: 0.5vw;
+}

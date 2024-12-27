@@ -1,0 +1,40 @@
+#project-title {
+    font-size: 2vw;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+}
+
+/* Container for project images */
+#project-images {
+    margin-top: 1vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1vw;
+    padding: 2vw;
+}
+
+/* Individual image styling */
+#project-images img {
+    max-width: 100%; /* Ensure images don't overflow horizontally */
+    height: auto;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Smooth zoom effect on hover */
+}
+
+/* Full-screen image styling for large images */
+#project-images img.fullscreen {
+    display: block;
+    width: 100vw; /* Take up the full screen width */
+    height: 100vh; /* Take up the full screen height */
+    object-fit: contain; /* Ensure the image is fully visible */
+    margin: 0 auto;
+}
+
+/* Hover effect for images */
+#project-images img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

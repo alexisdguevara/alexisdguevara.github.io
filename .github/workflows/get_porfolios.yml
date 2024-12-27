@@ -34,18 +34,19 @@ jobs:
       run: |
         python assets/python/collect_portfolios.py
 
-    # Step 5: Commit and push the portfolio.json file only if there are changes
-    - name: Commit and push portfolio.json if changed
+    # Step 5: Commit and push all new and modified files if there are changes
+    - name: Commit and push changes if detected
       run: |
         git config --global user.name "github-actions"
         git config --global user.email "github-actions@github.com"
         
-        git add assets/portfolio.json
+        # Stage all changes (new, modified, and deleted files)
+        git add -A
         
         # Check if there are changes to commit
         if git diff --cached --exit-code; then
           echo "No changes detected, skipping commit and push."
         else
-          git commit -m "Update portfolio.json"
+          git commit -m "Update portfolio and related files"
           git push
         fi
