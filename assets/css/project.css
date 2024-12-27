@@ -1,3 +1,42 @@
+/* Modal (hidden by default) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed position to cover the whole screen */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+    justify-content: center; /* Center the image */
+    align-items: center; /* Center the image vertically */
+}
+
+/* Modal Content (the full-screen image) */
+.modal-content {
+    max-width: 90%; /* Limit the max width */
+    max-height: 90%; /* Limit the max height */
+    object-fit: contain; /* Ensure the image fits inside without distortion */
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    top: 1vw;
+    right: 2vw;
+    color: #fff;
+    font-size: 2.5vw;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 #project-title {
     font-size: 2vw;
     font-weight: bold;
@@ -5,36 +44,96 @@
     color: white;
 }
 
-/* Container for project images */
+/* Container for project images using CSS Grid */
 #project-images {
     margin-top: 1vw;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Create 3 equal columns */
+    gap: 1vw; /* Space between images */
     padding: 2vw;
 }
 
 /* Individual image styling */
 #project-images img {
-    max-width: 100%; /* Ensure images don't overflow horizontally */
+    width: 100%; /* Make sure each image fills its grid cell */
     height: auto;
     object-fit: cover;
     cursor: pointer;
     transition: transform 0.3s ease; /* Smooth zoom effect on hover */
 }
 
-/* Full-screen image styling for large images */
-#project-images img.fullscreen {
-    display: block;
-    width: 100vw; /* Take up the full screen width */
-    height: 100vh; /* Take up the full screen height */
-    object-fit: contain; /* Ensure the image is fully visible */
-    margin: 0 auto;
-}
-
 /* Hover effect for images */
 #project-images img:hover {
     transform: scale(1.05); /* Slight zoom on hover */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Lazy load image styling */
+img.lazyload {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* When images are loaded, change the opacity */
+img.loaded {
+    opacity: 1;
+}
+
+/* Tablet and Mobile Optimization */
+
+/* Tablet (up to 768px) */
+@media (max-width: 768px) {
+    #project-title {
+        font-size: 4vw; /* Adjust title size for tablet */
+    }
+
+    /* Adjust the grid for tablet to 2 columns */
+    #project-images {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet */
+        gap: 2vw; /* Slightly larger gap */
+    }
+
+    /* Adjust images size for tablet */
+    #project-images img {
+        transition: transform 0.2s ease; /* Less zoom effect on hover */
+    }
+
+    .close {
+        font-size: 5vw; /* Increase close button size on tablet */
+    }
+}
+
+/* Phone (up to 480px) */
+@media (max-width: 480px) {
+    #project-title {
+        font-size: 5vw; /* Adjust title size for phone */
+    }
+
+    /* Adjust the grid for phone to 1 column */
+    #project-images {
+        grid-template-columns: 1fr; /* 1 column on phone */
+        gap: 3vw; /* Larger gap for better mobile view */
+    }
+
+    /* Adjust images size for phone */
+    #project-images img {
+        transition: transform 0.15s ease; /* Less zoom effect on hover */
+    }
+
+    .close {
+        font-size: 6vw; /* Increase close button size on phone */
+    }
+}
+
+/* Landscape Phone (up to 600px width) */
+@media (max-width: 600px) and (orientation: landscape) {
+    #project-title {
+        font-size: 4vw; /* Adjust title size for landscape mobile */
+    }
+
+    /* Adjust grid for landscape phone to 2 columns */
+    #project-images {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on landscape */
+        gap: 2.5vw; /* Adjust gap for landscape */
+    }
 }

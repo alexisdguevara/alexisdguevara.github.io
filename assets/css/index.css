@@ -8,23 +8,123 @@ html, body {
 
 /* Image Home Section */
 .image-home {
-	display: flex; /* Use flexbox to align items side by side */
-	justify-content: center; /* Center the images horizontally */
-	align-items: center; /* Align images vertically (optional, for uniformity) */
-	width: 100%; /* Full width of the screen */
+    display: flex; /* Use flexbox to align items side by side */
+    justify-content: center; /* Center the images horizontally */
+    align-items: center; /* Align images vertically (optional, for uniformity) */
+    width: 100%; /* Full width of the screen */
     padding-top: 8vw; /* Add some padding at the top */
-
+    flex-wrap: wrap; /* Allow images to wrap on smaller screens */
 }
 
 .image-home .home-image-left {
-	width: 60%; /* First image takes up 50% of the width */
-	height: auto; /* Maintain aspect ratio */
-	object-fit: cover;
+    width: 60%; /* First image takes up 60% of the width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover;
 }
 
 .image-home .home-image-right {
-	width: 30%; /* Second image takes up 25% of the width */
-	height: auto; /* Maintain aspect ratio */
-	object-fit: cover;
+    width: 30%; /* Second image takes up 30% of the width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover;
     border: 3px solid #ffffff;
+}
+
+/* Home projects container */
+.home-projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns */
+    gap: 2vw;
+    padding: 2vw;
+}
+
+.home-projects-container .project {
+    text-align: center;
+}
+
+.home-projects-container .project img {
+    width: 100%;
+    height: auto;
+    border-radius: 1vw;
+    transition: transform 0.3s ease; /* Smooth zoom effect on hover */
+}
+
+.home-projects-container .project p {
+    margin-top: 1vw; /* Space between image and title */
+    font-size: 1.25vw; /* Adjust font size */
+    color: white; /* Title color */
+}
+
+.project a {
+    color: white; /* Set link color */
+}
+
+.project a:hover {
+    color: #ccc; /* Change color on hover */
+}
+
+/* Heading styling */
+.recent-works-title {
+    font-size: 4vw; /* Adjust size as needed */
+    text-align: center;
+    color: white; /* Or any color that fits your design */
+    margin-top: 2vw; /* Adjust the spacing */
+    margin-bottom: 2vw; /* Adjust the spacing */
+    font-weight: lighter;
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+    /* Image Home Section */
+    .image-home {
+        flex-direction: column; /* Stack images vertically */
+        padding-top: 5vw; /* Adjust top padding */
+    }
+
+    .image-home .home-image-left,
+    .image-home .home-image-right {
+        width: 90%; /* Make both images take 90% of the width on mobile */
+        height: auto;
+    }
+
+    /* Home projects container */
+    .home-projects-container {
+        display: flex; /* Use flexbox to stack projects vertically */
+        flex-direction: column;
+        gap: 2vw; /* Adjust gap between projects */
+    }
+
+    .home-projects-container .project {
+        width: 100%; /* Make each project take full width on mobile */
+    }
+
+    .home-projects-container .project img {
+        border-radius: 1vw;
+        width: 100%; /* Ensure project images take full width */
+        height: auto;
+    }
+
+    /* Adjust project title font size for mobile */
+    .home-projects-container .project p {
+        font-size: 3vw; /* Larger text on mobile */
+    }
+
+    /* Adjust Recent Works title for mobile */
+    .recent-works-title {
+        font-size: 6vw; /* Larger title on mobile */
+        margin-top: 4vw; /* Adjust spacing for mobile */
+        margin-bottom: 4vw;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Even further adjustments for smaller screens */
+    .recent-works-title {
+        font-size: 7vw; /* Even larger title on very small screens */
+        margin-top: 5vw; /* Adjust spacing for very small screens */
+        margin-bottom: 5vw;
+    }
+
+    .home-projects-container .project p {
+        font-size: 4vw; /* Slightly larger text for readability */
+    }
 }

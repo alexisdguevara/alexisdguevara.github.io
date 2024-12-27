@@ -1,3 +1,4 @@
+/* Portfolio container layout */
 .portfolio-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Three columns */
@@ -5,16 +6,20 @@
   padding: 2vw;
 }
 
+/* Individual project styling */
 .project {
   text-align: center; /* Center-align text and image */
 }
 
+/* Project image styling */
 .project img {
   width: 100%; /* Make the image responsive */
   height: auto; /* Maintain aspect ratio */
   border-radius: 1vw; /* Optional: rounded corners */
+  transition: transform 0.3s ease; /* Smooth zoom effect on hover */
 }
 
+/* Project text styling */
 .project p {
   margin-top: 1vw;
   font-size: 1.25vw;
@@ -22,9 +27,56 @@
   font-family: Arial, sans-serif;
 }
 
+/* Project link styling */
 .project a {
-  /*text-decoration: none;*/
   color: white;
   padding: 0.5vw 1vw;
   border-radius: 0.5vw;
+}
+
+/* Hover effect for images */
+.project img:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Mobile and Tablet Optimization */
+
+/* Tablet (up to 768px) */
+@media (max-width: 768px) {
+  /* Adjust grid layout for tablet */
+  .portfolio-container {
+    grid-template-columns: repeat(2, 1fr); /* Two columns on tablet */
+    gap: 2vw; /* Maintain gap between items */
+    padding: 3vw; /* More padding for tablet view */
+  }
+
+  /* Adjust project text size */
+  .project p {
+    font-size: 3.5vw; /* Increase text size for tablet */
+  }
+
+  /* Adjust image zoom effect */
+  .project img {
+    transition: transform 0.2s ease; /* Slightly faster zoom effect */
+  }
+}
+
+/* Phone (up to 480px) */
+@media (max-width: 480px) {
+  /* Adjust grid layout for mobile */
+  .portfolio-container {
+    grid-template-columns: 1fr; /* One column on mobile */
+    gap: 4vw; /* Larger gap for mobile */
+    padding: 5vw; /* More padding for mobile */
+  }
+
+  /* Adjust project text size */
+  .project p {
+    font-size: 4.5vw; /* Larger text size for mobile */
+  }
+
+  /* Adjust image zoom effect */
+  .project img {
+    transition: transform 0.15s ease; /* Less zoom effect on mobile */
+  }
 }

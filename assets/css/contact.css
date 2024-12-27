@@ -88,8 +88,14 @@
 
 /* Tablet Optimization */
 @media (max-width: 768px) {
+    .contact-links {
+        display: flex; /* Align text links in a row */
+        justify-content: space-between; /* Distribute text links evenly */
+        gap: 3vw; /* Add spacing between each link */
+    }
+
     .contact-link {
-        font-size: 4vw; /* Adjust text size */
+        font-size: 3vw; /* Adjust text size */
     }
     .contact-form-container {
     max-width: 80%; /* Increase width for tablet */
